@@ -1,0 +1,81 @@
+site_name: Xray docs -- Alternative
+site_url: https://xtls.vercel.app
+
+theme:
+  name: material
+  logo: assets/icon.svg
+  favicon: assets/icon.svg
+  palette:
+    - scheme: default
+      primary: white
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - content.code.copy
+    - content.code.annotate
+    - announce.dismiss
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - pymdownx.mark
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+repo_name: XTLS/Xray-core
+repo_url: https://github.com/XTLS/Xray-core
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/projectXtls
+    - icon: fontawesome/brands/github
+      link: https://github.com/XTLS/Xray-core
+
+nav:
+  - Home:
+      - index.md
+  - Configuration:
+      - configuration/index.md
+      - Log:
+          - configuration/log/index.md
+      - DNS:
+          - configuration/dns/index.md
+          - Host: configuration/dns/host.md
+          - DNS Server: configuration/dns/server.md
+      - Shared: 
+          - Security:
+            - REALITY: configuration/shared/security/reality.md
+            - TLS: configuration/shared/security/tls.md
+          - Domain Name Match: configuration/shared/match.md
+      - Inbound:
+          - configuration/inbound/index.md
+          - Sniff: configuration/inbound/sniff.md
+          - Protocol:
+            - VLESS: configuration/inbound/protocol/vless.md
+      - Outbound:
+          - configuration/outbound/index.md
+          - Protocol:
+            - VLESS: configuration/outbound/protocol/vless.md
+      - Route:
+          - configuration/route/index.md
+          - Rule: configuration/route/rule.md
+      
